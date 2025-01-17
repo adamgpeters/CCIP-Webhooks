@@ -1,0 +1,21 @@
+{
+  "name": "ngrok-webhook-nodejs-sample",
+  "version": "1.0.0",
+  "description": "Sample webhook listener using NodeJS and ExpressJS",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngrok/ngrok-webhook-nodejs-sample.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ngrok/ngrok-webhook-nodejs-sample/issues"
+  },
+  "homepage": "https://github.com/ngrok/ngrok-webhook-nodejs-sample#readme",
+  "dependencies": {
+    "ethers": "^6.13.5",
+    "express": "^4.18.1"
+  }
+}
