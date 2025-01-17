@@ -1,6 +1,9 @@
 # Alchemy Webhooks Example: Following CCIP Events
 
-This sample app works as a webhook listener using Node and ExpressJS.
+This sample app listens to `CCIPSendReqested` events from Ethereum to Arbitrum in 3 simple steps
+1. Start the local server
+2. Port forwarding with ngrok
+3. Create the Alchemy Webhook
 
 **Prerequisites**: [Node.js](https://nodejs.org/en/).
 
@@ -52,14 +55,15 @@ Go to [your alchemy dashboard](https://dashboard.alchemy.com/webhooks) and creat
   }
 }
 ```
-For a "Webhook URL", use the same forwarding address from ngrok. Now create your webhook.
+For a "Webhook URL", use the **same** forwarding address from ngrok. Now create your webhook!
 
-If you have not already, start your app with `npm start`, and start listening to Eth --> Arb CCIP events! 
+If you have not already, start your app with `npm start`, and start listening to Eth --> Arb CCIP events 🚀
 
-This webhook follows the CCIPSendRequested event (`0xd0c3c799bf9e2639de44391e7f524d229b2b55f5b1ea94b2bf7da42f7243dddd`) for the Arbitrum onramp address (`0x69eCC4E2D8ea56E2d0a05bF57f4Fd6aEE7f2c284`). This webhook could be altered to follow multiple network onramps, for instance, 
+## Notes
+This webhook follows the `CCIPSendRequested` event (`0xd0c3c799bf9e2639de44391e7f524d229b2b55f5b1ea94b2bf7da42f7243dddd`) for the Arbitrum onramp address (`0x69eCC4E2D8ea56E2d0a05bF57f4Fd6aEE7f2c284`). This webhook could be altered to follow multiple network onramps. For instance, 
 ```
 addresses: ["0x69eCC4E2D8ea56E2d0a05bF57f4Fd6aEE7f2c284", "0xD8E8720709a3d9A18a9B281E6148E94149B2E252"]
 ``` 
-would follow Arb and Astar! See onramp addresses [here](https://docs.chain.link/ccip/directory/mainnet). 
+would follow Arb and Astar! See further onramp addresses [here](https://docs.chain.link/ccip/directory/mainnet). 
 
 *Originally Forked from https://ngrok.com/docs/integrations/alchemy/webhooks/*
