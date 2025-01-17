@@ -1,4 +1,4 @@
-# Alchemy Webhooks Example: Following CCIP Events
+# Alchemy Webhooks Example: Following CCIP Events on EVM Chains
 
 This sample app listens to `CCIPSendReqested` events from Ethereum to Arbitrum in 3 simple steps
 1. Start the local server
